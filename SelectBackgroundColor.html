@@ -1,0 +1,233 @@
+<html>
+<head>
+<style type="text/css">
+* /* Задает абсолютную точку координат на странице */
+{
+padding:0;
+margin:0;
+}
+.fon
+{ 
+position:absolute;
+top:0px;
+left:0px;
+width:398px;
+height:5%;
+background:#ccc;
+border:solid 1px #777;
+text-align:center;
+padding-top:5px; /* Поля текста */
+font-weight: 600; /* Жирное начертание */
+}
+#bgchoice
+{
+position:absolute;
+top:6%;
+left:0px;
+border:solid 1px #777;
+width:400px;
+height:88%;
+}
+option
+{
+padding-left:10px; /* Поля текста */
+}
+#resultId
+{
+position:absolute;
+bottom:0px;
+width:398px;
+height:31px;
+border:solid 1px #777;
+background:#ccc;
+text-align:center;
+padding-top:7px;
+}
+</style>
+<script type="text/javascript">
+function changeBG()
+{
+var selectedBGColor = document.getElementById("bgchoice").value;
+                      document.body.style.backgroundColor = selectedBGColor;
+let id = document.getElementById('bgchoice');
+let selectShiftTypeId = id.value;
+    document.getElementById('resultId').innerHTML = selectShiftTypeId;
+}
+</script>
+</head>
+<body>
+<div class="fon">Выберите цвет фона</div>
+<div id="resultId"></div>
+<select id="bgchoice" onchange="changeBG()" size="12">
+<optgroup label="Rote Farben" style="background:whitesmoke; color:slategray">
+ <option value="IndianRed" style="background:IndianRed; color:white">IndianRed</option>
+ <option value="LightCoral" style="background:LightCoral; color:black">LightCoral</option>
+ <option value="Salmon" style="background:Salmon; color:black">Salmon</option>
+ <option value="DarkSalmon" style="background:DarkSalmon; color:black">DarkSalmon</option>
+ <option value="lightsalmon" style="background:lightsalmon; color:black">lightsalmon</option>
+ <option value="Crimson" style="background:Crimson; color:white">Crimson</option>
+ <option value="Red" style="background:Red; color:white">Red</option>
+ <option value="FireBrick" style="background:FireBrick; color:white">FireBrick</option>
+ <option value="DarkRed" style="background:DarkRed; color:white">DarkRed</option>
+</optgroup>
+<optgroup label="Rosa Farben" style="background:whitesmoke; color:slategray">
+<option value="Pink" style="background:Pink; color:black">Pink</option>
+<option value="LightPink" style="background:LightPink; color:black">LightPink</option>
+<option value="HotPink" style="background:HotPink; color:white">HotPink</option>
+<option value="DeepPink" style="background:DeepPink; color:white">DeepPink</option>
+<option value="MediumVioletRed" style="background:MediumVioletRed; color:white">MediumVioletRed</option>
+<option value="PaleVioletRed" style="background:PaleVioletRed; color:white">PaleVioletRed</option>
+</optgroup>
+<optgroup label="Orange Farben" style="background:whitesmoke; color:slategray">
+<option value="Coral" style="background:Coral; color:white">Coral</option>
+<option value="Tomato" style="background:Tomato; color:white">Tomato</option>
+<option value="OrangeRed" style="background:OrangeRed; color:white">OrangeRed</option>
+<option value="DarkOrange" style="background:DarkOrange; color:white">DarkOrange</option>
+<option value="Orange" style="background:Orange; color:white">Orange</option>
+</optgroup>
+<optgroup label="Gelbe Farben" style="background:whitesmoke; color:slategray">
+<option value="Gold" style="background:Gold; color:black">Gold</option>
+<option value="Yellow" style="background:Yellow; color:black">Yellow</option>
+<option value="LightYellow" style="background:LightYellow; color:black">LightYellow</option>
+<option value="LemonChiffon" style="background:LemonChiffon; color:black">LemonChiffon</option>
+<option value="LightGoldenrodYellow" style="background:LightGoldenrodYellow; color:black">LightGoldenrodYellow</option>
+<option value="PapayaWhip" style="background:PapayaWhip; color:black">PapayaWhip</option>
+<option value="Moccasin" style="background:Moccasin; color:black">Moccasin</option>
+<option value="PeachPuff" style="background:PeachPuff; color:black">PeachPuff</option>
+<option value="PaleGoldenrod" style="background:PaleGoldenrod; color:black">PaleGoldenrod</option>
+<option value="Khaki" style="background:Khaki; color:black">Khaki</option>
+<option value="DarkKhaki" style="background:DarkKhaki; color:white">DarkKhaki</option>
+</optgroup>
+<optgroup label="Lila Farben" style="background:whitesmoke; color:slategray">
+<option value="Lavender" style="background:Lavender; color:black">Lavender</option>
+<option value="Thistle" style="background:Thistle; color:white">Thistle</option>
+<option value="Plum" style="background:Plum; color:white">Plum</option>
+<option value="Violet" style="background:Violet; color:white">Violet</option>
+<option value="Orchid" style="background:Orchid; color:white">Orchid</option>
+<option value="Fuchsia" style="background:Fuchsia; color:white">Fuchsia</option>
+<option value="MediumOrchid" style="background:MediumOrchid; color:white">MediumOrchid</option>
+<option value="MediumPurple" style="background:MediumPurple; color:white">MediumPurple</option>
+<option value="BlueViolet" style="background:BlueViolet; color:white">BlueViolet</option>
+<option value="DarkViolet" style="background:DarkViolet; color:white">DarkViolet</option>
+<option value="DarkOrchid" style="background:DarkOrchid; color:white">DarkOrchid</option>
+<option value="DarkMagenta" style="background:DarkMagenta; color:white">DarkMagenta</option>
+<option value="Purple" style="background:Purple; color:white">Purple</option>
+<option value="Indigo" style="background:Indigo; color:white">Indigo</option>
+<option value="SlateBlue" style="background:SlateBlue; color:white">SlateBlue</option>
+<option value="DarkSlateBlue" style="background:DarkSlateBlue; color:white">DarkSlateBlue</option>
+</optgroup>
+<optgroup label="Grüne Farben" style="background:whitesmoke; color:slategray">
+<option value="GreenYellow" style="background:GreenYellow; color:black">GreenYellow</option>
+<option value="Chartreuse" style="background:Chartreuse; color:black">Chartreuse</option>
+<option value="LawnGreen" style="background:LawnGreen; color:black">LawnGreen</option>
+<option value="Lime" style="background:Lime; color:black">Lime</option>
+<option value="LimeGreen" style="background:LimeGreen; color:black">LimeGreen</option>
+<option value="PaleGreen" style="background:PaleGreen; color:black">PaleGreen</option>
+<option value="LightGreen" style="background:LightGreen; color:black">LightGreen</option>
+<option value="MediumSpringGreen" style="background:MediumSpringGreen; color:black">MediumSpringGreen</option>
+<option value="SpringGreen" style="background:SpringGreen; color:black">SpringGreen</option>
+<option value="MediumSeaGreen" style="background:MediumSeaGreen; color:black">MediumSeaGreen</option>
+<option value="SeaGreen" style="background:SeaGreen; color:white">SeaGreen</option>
+<option value="ForestGreen" style="background:ForestGreen; color:white">ForestGreen</option>
+<option value="Green" style="background:Green; color:white">Green</option>
+<option value="DarkGreen" style="background:DarkGreen; color:white">DarkGreen</option>
+<option value="YellowGreen" style="background:YellowGreen; color:white">YellowGreen</option>
+<option value="OliveDrab" style="background:OliveDrab; color:white">OliveDrab</option>
+<option value="Olive" style="background:Olive; color:white">Olive</option>
+<option value="DarkOliveGreen" style="background:DarkOliveGreen; color:white">DarkOliveGreen</option>
+<option value="MediumAquamarine" style="background:MediumAquamarine; color:black">MediumAquamarine</option>
+<option value="DarkSeaGreen" style="background:DarkSeaGreen; color:white">DarkSeaGreen</option>
+<option value="LightSeaGreen" style="background:LightSeaGreen; color:white">LightSeaGreen</option>
+<option value="DarkCyan" style="background:DarkCyan; color:white">DarkCyan</option>
+<option value="Teal" style="background:Teal; color:white">Teal</option>
+</optgroup>
+<optgroup label="Blaue Farben" style="background:whitesmoke; color:slategray">
+<option value="Aqua" style="background:Aqua; color:black">Aqua</option>
+<option value="LightCyan" style="background:LightCyan; color:black">LightCyan</option>
+<option value="PaleTurquoise" style="background:PaleTurquoise; color:black">PaleTurquoise</option>
+<option value="Aquamarine" style="background:Aquamarine; color:black">Aquamarine</option>
+<option value="Turquoise" style="background:Turquoise; color:black">Turquoise</option>
+<option value="MediumTurquoise" style="background:MediumTurquoise; color:white">MediumTurquoise</option>
+<option value="DarkTurquoise" style="background:DarkTurquoise; color:white">DarkTurquoise</option>
+<option value="CadetBlue" style="background:CadetBlue; color:white">CadetBlue</option>
+<option value="SteelBlue" style="background:SteelBlue; color:white">SteelBlue</option>
+<option value="LightSteelBlue" style="background:LightSteelBlue; color:black">LightSteelBlue</option>
+<option value="PowderBlue" style="background:PowderBlue; color:black">PowderBlue</option>
+<option value="LightBlue" style="background:LightBlue; color:black">LightBlue</option>
+<option value="SkyBlue" style="background:SkyBlue; color:black">SkyBlue</option>
+<option value="LightSkyBlue" style="background:LightSkyBlue; color:black">LightSkyBlue</option>
+<option value="DeepSkyBlue" style="background:DeepSkyBlue; color:black">DeepSkyBlue</option>
+<option value="DodgerBlue" style="background:DodgerBlue; color:white">DodgerBlue</option>
+<option value="CornflowerBlue" style="background:CornflowerBlue; color:white">CornflowerBlue</option>
+<option value="MediumSlateBlue" style="background:MediumSlateBlue; color:white">MediumSlateBlue</option>
+<option value="RoyalBlue" style="background:RoyalBlue; color:white">RoyalBlue</option>
+<option value="Blue" style="background:Blue; color:white">Blue</option>
+<option value="MediumBlue" style="background:MediumBlue; color:white">MediumBlue</option>
+<option value="DarkBlue" style="background:DarkBlue; color:white">DarkBlue</option>
+<option value="Navy" style="background:Navy; color:white">Navy</option>
+<option value="MidnightBlue" style="background:MidnightBlue; color:white">MidnightBlue</option>
+</optgroup>
+<optgroup label="Braune Farben" style="background:whitesmoke; color:slategray">
+<option value="Cornsilk" style="background:Cornsilk; color:black">Cornsilk</option>
+<option value="BlanchedAlmond" style="background:BlanchedAlmond; color:black">BlanchedAlmond</option>
+<option value="Bisque" style="background:Bisque; color:black">Bisque</option>
+<option value="NavajoWhite" style="background:NavajoWhite; color:black">NavajoWhite</option>
+<option value="Wheat" style="background:Wheat; color:black">Wheat</option>
+<option value="BurlyWood" style="background:BurlyWood; color:white">BurlyWood</option>
+<option value="Tan" style="background:Tan; color:white">Tan</option>
+<option value="RosyBrown" style="background:RosyBrown; color:white">RosyBrown</option>
+<option value="SandyBrown" style="background:SandyBrown; color:white">SandyBrown</option>
+<option value="Goldenrod" style="background:Goldenrod; color:white">Goldenrod</option>
+<option value="DarkGoldenrod" style="background:DarkGoldenrod; color:white">DarkGoldenrod</option>
+<option value="Peru" style="background:Peru; color:white">Peru</option>
+<option value="Chocolate" style="background:Chocolate; color:white">Chocolate</option>
+<option value="SaddleBrown" style="background:SaddleBrown; color:white">SaddleBrown</option>
+<option value="Sienna" style="background:Sienna; color:white">Sienna</option>
+<option value="Brown" style="background:Brown; color:white">Brown</option>
+<option value="Maroon" style="background:Maroon; color:white">Maroon</option>
+</optgroup>
+<optgroup label="Weiße Farben" style="background:whitesmoke; color:slategray">
+<option value="White" style="background:White; color:black">White</option>
+<option value="Snow" style="background:Snow; color:black">Snow</option>
+<option value="Honeydew" style="background:Honeydew; color:black">Honeydew</option>
+<option value="MintCream" style="background:MintCream; color:black">MintCream</option>
+<option value="Azure" style="background:Azure; color:black">Azure</option>
+<option value="AliceBlue" style="background:AliceBlue; color:black">AliceBlue</option>
+<option value="GhostWhite" style="background:GhostWhite; color:black">GhostWhite</option>
+<option value="WhiteSmoke" style="background:WhiteSmoke; color:black">WhiteSmoke</option>
+<option value="Seashell" style="background:Seashell; color:black">Seashell</option>
+<option value="Beige" style="background:Beige; color:black">Beige</option>
+<option value="OldLace" style="background:OldLace; color:black">OldLace</option>
+<option value="FloralWhite" style="background:FloralWhite; color:black">FloralWhite</option>
+<option value="Ivory" style="background:Ivory; color:black">Ivory</option>
+<option value="AntiqueWhite" style="background:AntiqueWhite; color:black">AntiqueWhite</option>
+<option value="Linen" style="background:Linen; color:black">Linen</option>
+<option value="LavenderBlush" style="background:LavenderBlush; color:black">LavenderBlush</option>
+<option value="MistyRose" style="background:MistyRose; color:black">MistyRose</option>
+</optgroup>
+<optgroup label="Weiße Farben" style="background:whitesmoke; color:slategray">
+<option value="Gainsboro" style="background:Gainsboro; color:black">Gainsboro</option>
+<option value="LightGray" style="background:LightGray; color:black">LightGray</option>
+<option value="Silver" style="background:Silver; color:black">Silver</option>
+<option value="DarkGray" style="background:DarkGray; color:black">DarkGray</option>
+<option value="Gray" style="background:Gray; color:white">Gray</option>
+<option value="DimGray" style="background:DimGray; color:white">DimGray</option>
+<option value="LightSlateGray" style="background:LightSlateGray; color:white">LightSlateGray</option>
+<option value="SlateGray" style="background:SlateGray; color:white">SlateGray</option>
+<option value="DarkSlateGray" style="background:DarkSlateGray; color:white">DarkSlateGray</option>
+<option value="Black" style="background:Black; color:white">Black</option>
+</optgroup>
+</select>
+</body>
+</html>
+<!------------------------------------------------>
+<!-- ОПИСАНИЕ ------------------------------------>
+<!-- Скачиваете файл ----------------------------->
+<!-- Два раза кликаете мышкой -------------------->
+<!-- Прокрутив колёсико мышки выберите цвет ------>
+<!-- Щёлкните левой кнопкой по выбранному цвету -->
+<!-- В нижнем блоке появится его название -------->
+<!-- Нажав левую кнопку выделите название -------->
+<!-- Скопируйте нажав кнопки контрл + С ---------->
+<!-- Вставьте название нажав кнопки контрл + V --->
+<!------------------------------------------------>

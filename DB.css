@@ -1,0 +1,95 @@
+body
+{
+margin:0;
+padding:0;
+background-color:Silver;
+}
+a
+{
+text-decoration:none;
+color:#000 !important;
+}
+ul li
+{
+  list-style:none;
+  cursor:pointer;
+}
+#textIco            {list-style-image:url("D.ico");}
+#htmIco             {list-style-image:url("D.ico");}
+#htmlIco            {list-style-image:url("D.ico");}
+#htmlTagsIco        {list-style-image:url("D.ico");}
+#blockTagsIco       {list-style-image:url("D.ico");}
+#htmlGruppenTagsIco {list-style-image:url("D.ico");}
+#cssIco             {list-style-image:url("D.ico");}
+#ColorIco           {list-style-image:url("D.ico");}
+#csshtmlIco         {list-style-image:url("D.ico");}
+#javascriptIco      {list-style-image:url("D.ico");}
+#javascriptHtmlIco  {list-style-image:url("D.ico");}
+#javascriptCssIco   {list-style-image:url("D.ico");}
+#javascriptCanvasIco{list-style-image:url("D.ico");}
+#DeutschIco         {list-style-image:url("D.ico");}
+#svgIco             {list-style-image:url("D.ico");}
+#AbcDoIco           {list-style-image:url("D.ico");}
+#PronounsIco        {list-style-image:url("D.ico");}
+#VerbsIco           {list-style-image:url("D.ico");}
+#QuestionIco        {list-style-image:url("D.ico");}
+#toolIco            {list-style-image:url("D.ico");}
+.li
+{
+background-color:DarkGray;
+padding-left:3%; /* Поля текста */
+}
+.hide::before {
+  content: "▶";
+}
+.show::before {
+  content: "▼";
+}
+#sbc
+{
+display:none;
+position:absolute;
+top:1%;
+right:1px;
+height:98%;
+width:69%;
+}
+#rechner
+{
+display:none;
+position:absolute;
+top:2%;
+right:5px;
+height:43%;
+width:31%;
+background-color:Gainsboro;
+}
+#draft
+{
+display:none;
+position:absolute;
+top:1%;
+right:1px;
+height:98%;
+width:69%;
+}
+#primeNumber
+{
+display:none;
+position:absolute;
+top:1%;
+right:1px;
+height:98%;
+width:69%;
+}
+#Ul
+{
+position:absolute;
+top:0x;
+left:0x;
+width:38%;
+height:100%;
+overflow:auto;
+}
+#alarm{display:none;}
+#textarea{display:none;}

@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<Script type="text/JavaScript" src="../JScript/WatchMetod.js"></script>
+</head>
+<body onload="Modif(); WatchMet();">
+<Div id="lastModified"></Div>
+<table id="myTable">
+<caption><h2>Методы времени в JavaScript</h2></caption>
+<tr>
+<td colspan="3">
+     current_date = new Date();
+</br>document.write(current_date.get название ());
+</td>
+</tr>
+<tr>
+<td id="myTd">Методы</td><td>Описание</td><td>Исполнение</td>
+</tr>
+<tr>
+<td>Date()</td><td>Возвращает текущую дату и время</td>
+<td>
+<script type="text/javascript">
+document.write(Date());
+</script>
+</td>
+</tr>
+<tr>
+<td>getDate()</td><td>Используется для получения текущего дня месяца</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getDate());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getDay()</td><td>Используется для получения текущего дня недели</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getDay());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getFullYear()</td><td>Возвращает четырехзначное число текущего года</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getFullYear());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getHours()</td><td>Возвращает время в часах (0-23)</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getHours());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getMilliseconds()</td><td>Возвращает миллисекунды (0-999)</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getMilliseconds());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getMinutes()</td><td>Возвращает текущие минуты ( 0-59)</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getMinutes());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getMonth()</td><td>Возвращает текущий месяц ( 0-11)</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getMonth());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getSeconds()</td><td>Возвращает секунды ( 0-59)</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getSeconds());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getTime()</td><td>Возвращает число миллисекунд с 1-го января 1970 года</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getTime());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getTimezoneOffset()</td><td>Возвращает разницу между местным временем и GMT</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getTimezoneOffset());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCDate()</td><td>Возвращает день месяца (1-31) в соответствии с UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCDate());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCDay()</td><td>Возвращает день недели (0-6) в соответствии с UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCDay());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCMonth()</td><td>Возвращает месяц (0-11) в соответствии с UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCMonth());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCFullYear()</td><td>Возвращает число года в соответствии с UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCFullYear());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCHours()</td><td>Возвращает время в часах (0-23) согласно UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCHours());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCMinutes()</td><td>Возвращает минуты (0-59) согласно UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCMinutes());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCSeconds()</td><td>Возвращает секунды (0-59) согласно UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCSeconds());
+</script>
+</td>
+</tr>
+
+<tr>
+<td>getUTCMilliseconds()</td><td>Возвращает миллисекунды согласно UTC</td>
+<td>
+<script type="text/javascript">
+current_date = new Date();
+document.write(current_date.getUTCMilliseconds());
+</script>
+</td>
+</tr>
+
+<tr>
+<td colspan="4">
+var d = new Date;
+d.setимя (число);
+document.write( d );
+</td>
+</tr>
+
+<tr>
+<td>setDate()</td><td>Устанавливает текущий день месяца (1-31)</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setDate(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setFullYear()</td><td>Устанавливает текущий год</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setFullYear(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setHours()</td><td>Устанавливает время в часах (0-23)</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setHours(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setMinutes()</td><td>Устанавливает минуты (0-59)</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setMinutes(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setMonth()</td><td>Устанавливает месяц (0-11)</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setMonth(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setSeconds()</td><td>Устанавливает секунды (0-59)</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setSeconds(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setUTCHours()</td><td>Устанавливает время в часах (0-23) согласно UTC</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setUTCHours(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setUTCMinutes()</td><td>Устанавливает минуты (0-59) согласно UTC стандарту</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setUTCMinutes(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>setUTCSeconds()</td><td>Устанавливает секунды (0-59) согласно UTC стандарту</td>
+<td>
+<script type="text/javascript">
+var d = new Date;
+d.setUTCSeconds(1);
+document.write( d );
+</script>
+</td>
+</tr>
+
+<tr>
+<td colspan="4">
+var d = new Date();
+var n = d.toимя();
+document.write( n );
+</td>
+</tr>
+
+<tr>
+<td>toDateString()</td><td>Возвращает текущую дату</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toDateString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toLocaleDateString()</td><td>Возвращает дату согласно местному времени</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toLocaleDateString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toLocaleTimeString()</td><td>Возвращает время согласно местному времени</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toLocaleTimeString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toLocaleString()</td><td>Возвращает дату и время согласно местному времени</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toLocaleString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toString()</td><td>Возвращает дату, время и часовой пояс</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toTimeString()</td><td>Возвращает время и часовой пояс</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toTimeString();
+document.write( n );
+</script>
+</td>
+</tr>
+
+<tr>
+<td>toUTCString()</td><td>Возвращает время согласно UTC стандарту</td>
+<td>
+<script type="text/javascript">
+var d = new Date();
+var n = d.toUTCString();
+document.write( n );
+</script>
+</td>
+</tr>
+</table>
+ </body>
+</html>
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<link rel="Stylesheet" href="DB.css" type="text/css">
+<link rel="SHORTCUT Icon" id=shortcutlink HREF="Programmieren.ico">
+<Script type="text/JavaScript" src="DB.js"></Script>
+</head>
+<body onload="load(); start(document.forms[0]); unicode();">
+
+<Div Id="Ul">
+
+<ul>
+ <ul>
+    <li  class="li" id="textIco" onclick="text();">TXT</li>
+    <ul id="textBox" style="display:none;">
+      <li class="li" id="liAlphabet" onclick="alphabet()">Alphabet</li>
+    </ul>
+ </ul>
+ <ul>
+    <li  class="li" id="htmIco" onclick="htm();">HTM</li>
+    <ul id="htmBox" style="display:none;">
+      <li class="li" id="liCod" onclick="cod()">HTM Cod</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="htmlIco" onclick="html();">HTML</li>
+    <ul id="htmlBox" style="display:none;">
+         <li  class="li" id="htmlTagsIco" onclick="htmlTags();">Строчные теги</li>
+         <ul id="htmlTagsBox" style="display:none;">
+           <li class="li" id="liTag" onclick="tags()">Остальные теги</li>
+         </ul>
+         <li  class="li" id="blockTagsIco" onclick="blockTags();">Блочные теги</li>
+         <ul id="blockTagsBox" style="display:none;">
+           <li class="li" id="liImg" onclick="Img()">Img</li>
+           <li class="li" id="liDiv" onclick="Div()">Div</li>
+           <li class="li" id="liSpan" onclick="Span()">Span</li>
+           <li class="li" id="liA" onclick="A()">A</li>
+           <li class="li" id="liButon" onclick="Buton()">Button</li>
+           <li class="li" id="liInput" onclick="Input()">Input</li>
+         </ul>
+         <li  class="li" id="htmlGruppenTagsIco" onclick="htmlGruppenTags();">Комплексы тегов</li>
+         <ul id="htmlGruppenTagsBox" style="display:none;">
+           <li class="li" id="liComentHtml" onclick="comentHtml()">Комментарий</li>
+           <li class="li" id="liDoctype" onclick="Doctype()">Doctype</li>
+           <li class="li" onclick="meta()">meta</li>
+           <li class="li" onclick="pageHtml()">Форма страницы HTML</li>
+           <li class="li" onclick="tagCss()">Теги CSS</li>
+           <li class="li" onclick="tagJavaScript()">Теги JavaScript</li>
+           <li class="li" onclick="Table()">Table</li>
+           <li class="li" onclick="UlLi()">Ul Li</li>
+           <li class="li" id="liSelect" onclick="Select()">Select</li>
+         </ul>
+    </ul>
+   </ul>
+  <ul>
+    <li  class="li" id="cssIco" onclick="css();">CSS</li>
+    <ul id="cssBox" style="display:none;">
+      <li class="li" id="liCssParameter" onclick="CssParameter()">CSS параметры</li>
+      <li class="li" onclick="cursorJs();">Выберите вид курсора</li>
+      <li class="li" onclick="srift()">Шрифты</li>
+         <li  class="li" id="ColorIco" onclick="Color();">Color</li>
+         <ul id="ColorBox" style="display:none;">
+            <li class="li" onclick="webFarben();">Web Farben</li>
+            <li class="li" onclick="ColorBrowser();">Браузерные цвета</li>
+            <li class="li" onclick="Browser();">Браузерные</li>
+            <li class="li" onclick="SafeColors();">Безопасные цвета</li>
+         </ul>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="csshtmlIco" onclick="csshtml();">CSS/HTML</li>
+    <ul id="csshtmlBox" style="display:none;">
+      <li class="li" onclick="">Команды CSS/HTML</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="javascriptIco" onclick="javascript();">JavaScript</li>
+    <ul id="javascriptBox" style="display:none;">
+      <li class="li" onclick="">Команды JavaScript</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="javascriptHtmlIco" onclick="javascriptHtml();">JavaScript/HTML</li>
+    <ul id="javascriptHtmlBox" style="display:none;">
+      <li class="li" onclick="CommandsJavaScriptHtml()">Команды JavaScript HTML</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="javascriptCssIco" onclick="javascriptCss();">JavaScript/CSS</li>
+    <ul id="javascriptCssBox" style="display:none;">
+      <li class="li" onclick="CommandsJavaScriptCss()">Команды JavaScript/CSS</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="javascriptCanvasIco" onclick="javascriptCanvas();">JavaScript/Canvas</li>
+    <ul id="javascriptCanvasBox" style="display:none;">
+      <li class="li" onclick="canvas()">Команды JavaScript/Canvas</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="svgIco" onclick="svg();">SVG</li>
+    <ul id="svgBox" style="display:none;">
+      <li class="li" onclick="">Команды SVG</li>
+    </ul>
+    <li class="li" onclick="Uhrzeit();">Uhrzeit</li>
+    <li class="li" id="DeutschIco" onclick="Deutsch();">Deutsch</li>
+    <ul id="DeutschBox" style="display:none;">
+      <li  class="li" id="AbcDoIco" onclick="AbcDo();">Немецкий алфавит</li>
+      <ul id="AbcDoBox" style="display:none;">
+         <li class="li" onclick="AlphabetDPng()">Немецкая клавиатура</li>
+         <li class="li" onclick="AlphabetD()">Немецкие буквы</li>
+      </ul>
+      <li  class="li" id="PronounsIco" onclick="Pronouns();">Местоимения</li>
+      <ul id="PronounsBox" style="display:none;">
+         <li class="li" onclick="tTpw()">Указательные местоимения</li>
+         <li class="li" onclick="tTpp()">местоимения</li>
+         <li class="li" onclick="tTpn()">Neutrum местоимения</li>
+         <li class="li" onclick="tTpm()">Possessiv Mann</li>
+         <li class="li" onclick="tTpr()">Reflexive</li>
+         <li class="li" onclick="fTdp()">Dativ Pronomen</li>
+         <li class="li" onclick="tText()">Местоимение</li>
+         <li class="li" onclick="DemonstrativePronomen()">Demonstrative Pronomen</li>
+      </ul>
+      <li  class="li" id="VerbsIco" onclick="Verbs();">Глаголы</li>
+      <ul id="VerbsBox" style="display:none;">
+         <li class="li" onclick="GetWollen()">Wollen Хотеть</li>
+         <li class="li" onclick="GetSollen()">Sollen Мочь</li>
+         <li class="li" onclick="GetMussen()">Müssen Должен</li>
+         <li class="li" onclick="GetMogen()">Mögen Любить</li>
+         <li class="li" onclick="GetMochten()">Möchten</li>
+         <li class="li" onclick="GetKonnen()">Konnen</li>
+         <li class="li" onclick="DurfenDurfen()">Durfen</li>
+         <li class="li" onclick="SeinSein()">Быть Sein</li>
+         <li class="li" onclick="HabenHaben()">иметь Haben</li>
+      </ul>
+      <li  class="li" id="QuestionIco" onclick="Question();">Вопросы</li>
+      <ul id="QuestionBox" style="display:none;">
+         <li class="li" onclick="FragUrsF()">Вопрос причины</li>
+         <li class="li" onclick="FragF()">Вопрос</li>
+         <li class="li" onclick="FragZeitF()">Вопросы времени</li>
+      </ul>
+      <li class="li" onclick="GrüsseGrüsse()">Простые вежливые обращения</li>
+      <li class="li" onclick="GrsGgrsse()">Составные вежливые обращения</li>
+      <li class="li" onclick="Okonhania()">Окончания</li>
+      <li class="li" onclick="NegativeWort()">Negative Wort</li>
+      <li class="li" onclick="Konjukt()">Konjukt</li>
+      <li class="li" onclick="GetSubstantive()">Окончания</li>
+    </ul>
+  </ul>
+  <ul>
+    <li  class="li" id="toolIco" onclick="tool(); return false">Инструменты</li>
+    <ul id="toolBox" style="display:none;">
+      <li class="li">
+      <a onclick="SelectBackgroundColor();return verocultar(this);" href="javascript:void(0)">Выберите цвет фона</a><span id="a">&#9632;</span>
+      </li>
+      <li class="li">
+      <a onclick="FunКechner();return verocultar(this);" href="javascript:void(0)">Калькулятор</a><span id="a">&#9632;</span>
+      </li>
+      <li class="li">
+      <a onclick="draft();return verocultar(this);" href="javascript:void(0)">Черновик</a><span id="a">&#9632;</span>
+      </li>
+      <li class="li">
+      <a onclick="primeNumber();return verocultar(this);" href="javascript:void(0)">Простые числа</a><span id="a">&#9632;</span>
+      </li>
+      <li class="li">
+      <a target="_blank" href="file:///home/grannik/ContentHTML/HTMLvisitka/HTMLvisitkaGrannik/HTMLvisitkaGrannik.html">Визитка</a>
+      </li>
+      <li class="li"><a target="_blank" href="MouseCoords.html">MouseCoords</a></li>
+      <li class="li"><a target="_blank" href="ColorSintesftor.html">ColorSintesftor</a></li>
+      <li class="li"><a target="_blank" href="WatchMetod.html">WatchMetod</a></li>
+  </ul>
+</ul>
+<li class="li" onclick="clos()">Закрыть окна</li>
+</ul>
+
+<ul>textarea
+    <li onclick="aaa()">добавить текст</li>
+    <li onclick="ClearTextarea()">ClearTextarea</li>
+    <li onclick="documenImg()">documenImg</li>
+    <li onclick="JScript()">JScript</li>
+    <li onclick="documentTagName()">documentTagName</li>
+    <li onclick="documentRdT()">documentRdT</li>
+    <li onclick="block()">block</li>
+    <li onclick="none()">none</li>
+</ul>
+
+</Div>
+
+<Div Id="Txt"></Div>
+<IFRAME APPLICATION="yes" id="sbc" SRC="SelectBackgroundColor.html"></IFRAME>
+<IFRAME APPLICATION="yes" id="rechner" SRC="Rechner.html"></IFRAME>
+<Iframe Application="yes" id="draft" SRC="draft.txt"></IFRAME>
+<Iframe Application="yes" id="primeNumber" SRC="primeNumber.txt"></IFRAME>
+<img id="image">
+<canvas width="861px" height="663px" id='alarm'></canvas>
+<textarea Id="textarea"></textarea>
+</body>
+</html>
+ 

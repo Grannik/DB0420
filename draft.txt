@@ -1,0 +1,428 @@
+Черновик
+
+// ------------------------------------------------------------- Станица открыта: -------------------------------------------------------//
+function jetztModif()
+{
+var d = new Date();
+var n = d.toLocaleString();
+document.getElementById("jetztModified").innerHTML="Станица открыта: "+( n );
+document.getElementById('jetztModified').style.fontSize = '120%';
+document.getElementById('jetztModified').style.position = "absolute";
+document.getElementById('jetztModified').style.bottom = "4%";
+document.getElementById('jetztModified').style.left = "13px";
+document.getElementById('jetztModified').style.width = "90%";
+document.getElementById('jetztModified').style.textAlign = "left";
+document.getElementById('jetztModified').style.color = '#fff';
+}
+// ------------------------------------------------------Последний раз страница редактировалась: ----------------------------------------//
+function editing()
+{
+d0 = new Date('February 24, 2021');
+d1 = new Date();
+dt = (d1.getTime() - d0.getTime()) / (1000*60*60*24);
+document.getElementById("editing").innerHTML="Последний раз HTMLвизитка редактировалась: "+document.lastModified+" Программе: "+Math.round(dt)+"-й день."
+document.getElementById('editing').style.fontSize = '120%';
+document.getElementById('editing').style.position = "absolute";
+document.getElementById('editing').style.bottom = "4%";
+document.getElementById('editing').style.right = "13px";
+document.getElementById('editing').style.width = "100%";
+document.getElementById('editing').style.textAlign = "right";
+document.getElementById('editing').style.color = '#fff';
+}
+// --------------------------------------------------------- часы ---------------------------------------------------//
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+
+month=new Array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+
+date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
+" г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+ document.layers.docTime.document.write(date_time);
+ document.layers.docTime.document.close();
+}
+else document.getElementById("docTime").innerHTML = date_time;
+ setTimeout("clock()", 1000);
+document.getElementById('docTime').style.fontSize = '120%';
+document.getElementById('docTime').style.position = "absolute";
+document.getElementById('docTime').style.bottom = "4%";
+document.getElementById('docTime').style.left = "13px";
+document.getElementById('docTime').style.width = "70%";
+document.getElementById('docTime').style.textAlign = "center";
+document.getElementById('docTime').style.color = '#fff';
+}
+// --------------------------------------------------- GRANNIK online INTERNET Zhdanov Oleg ---------------------------------------------//
+function grannik()
+{
+document.getElementById("grannik").innerHTML="GRANNIK | online INTERNET | Zhdanov Oleg | Created in Linux OS | HTML | CSS | JavaScript| 🄯";
+document.getElementById('grannik').style.position = "absolute";
+document.getElementById('grannik').style.left = "350px";
+document.getElementById('grannik').style.bottom = "2%";
+document.getElementById('grannik').style.fontSize = '120%';
+document.getElementById('grannik').style.color = '#fff';
+}
+-----------------------------------------------------------------------------------------------------------------------------------------
+<!------------------------------------------------------------------- span --------------------------------------------------------------->
+<span Id="editing"></span>
+<span id="jetztModified"></span>
+<span Id="grannik"></span>
+<span id="docTime"></span>
+-----------------------------------------------------------------------------------------------------------------------------------------
+<body onload="editing(); jetztModif(); grannik(); clock();">
+
+<!-------------------------------------------------------------------  --------------------------------------------------------------->
+// Показать скрыть
+var showBtn = document.getElementById('myBtn');
+showBtn.onclick = function()
+{
+    var showme = document.getElementById('mydiv');
+    if (showme.style.display !== 'none') {
+        showme.style.display = 'none';
+    }
+    else {
+        showme.style.display = 'block';
+    } };
+function showHide(element_id)
+{
+if (document.getElementById(element_id)) { 
+var obj = document.getElementById(element_id); 
+if (obj.style.display != "block") { 
+obj.style.display = "block";
+}
+else obj.style.display ="none";
+}
+}  
+
+
+<button onclick="showHide('Calculator')">Calculator</button>
+
+<!-------------------------------------------------------------------  --------------------------------------------------------------->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Документ Без Имени</title>
+</head>
+
+<body>
+<SCRIPT LANGUAGE='JavaScript'>
+function outmsg(msg,ctrlwidth)
+{
+ msg = " --- "+msg
+ newmsg = msg
+ while (newmsg.length < ctrlwidth) {newmsg += msg}
+ document.write ('<FORM NAME="Outmsg">')
+ document.write ('<CENTER><INPUT NAME="outmsg" VALUE= "'+newmsg+'" SIZE= '+ctrlwidth+'></CENTER>')
+ document.write ('</FORM>')
+ rollmsg()
+}
+function rollmsg()
+{
+ NowMsg=document.Outmsg.outmsg.value
+ NowMsg=NowMsg.substring(1,NowMsg.length)+NowMsg.substring(0,1)
+ document.Outmsg.outmsg.value = NowMsg
+ bannerid=setTimeout("rollmsg()",100)
+}
+</SCRIPT>
+<SCRIPT language='JavaScript'>
+ outmsg("ТЕКСТ БЕГУЩЕЙ СТРОКИ !!!",70)
+</script>
+</body>
+</html>
+<!-- -------------------------------------------------- второй вариант ------------------------------------------- -->
+<html>
+<head>
+<script language="JavaScript">
+var position=0;
+function ticker()
+{
+ var k;
+ var msg="ТЕКСТ БЕГУЩЕЙ СТРОКИ !!!";
+ k=(75/msg.length)+1;
+ for (i = 0; i <= k; i++)
+ {
+ msg+=" "+msg;
+ document.Outmsg.outmsg.value=msg.substring(position,position+75);
+ }
+ if (position++==msg.length){ position=0;}
+ id=setTimeout("ticker()",100);
+} 
+//--<
+</script>
+</head>
+<body onLoad="ticker();">
+<form name="Outmsg">
+<input type="text" name="outmsg" size="19">
+</form>
+</body>
+</html>
+<!-- -------------------------------------------------- третий вариант ------------------------------------------- -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body onload="Mod();">
+<span id="printt">
+О сколько нам открытий чудных
+<br>Готовят просвещенья дух
+<br>И опыт, сын ошибок трудных,
+<br>И гений, парадоксов друг,
+<br>И случай, бог изобретатель...
+<br>
+<br>Александр Сергеевич Пушкин
+</span>
+<script language="JavaScript" type="text/javascript">
+function idd(id) {return document.getElementById(id);}
+function zabil(id,text) {idd(id).innerHTML = text;}
+function vzyal(id) {return idd(id).innerHTML;}
+var str=vzyal('printt');
+var i=str.length;
+var a=0; // Сколько символов показать в самом начале.
+function text()
+{if(a<=i)
+{
+zabil('printt',str.substring(0, a)); a++;
+setTimeout("text()", 100); // Скорость печатания текста
+}
+}
+text();
+</script>
+</body>
+</html>
+<!-- -------------------------------------------------- вариант ------------------------------------------- -->
+СОХРАНЕНИЕ ИНФОРМАЦИИ:
+
+1. На ГуглДиске.
+2. На телефоне.
+3. Списаться с Мишей и друзьями.
+4. Найти флэшку.
+5. Подумать...
+
+- Подумать над паролями...
+
+<script type="text/javascript"  src="script.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+body
+{
+padding:0px;
+margin:0px;
+}
+
+http://www.wisdomweb.ru/HDOMd/domain.php
+*********************************** Java Script *******************************************
+
+// Процедура инициализации окна формы
+function WindowOnLoad()
+// Размер окна
+  { var iWidth = 736, iHeight = 736;
+// Изменение размера окна и его центрирование
+    var iLeft = (  screen.availWidth - iWidth)  / 2;
+    var iTop  = ( screen.availHeight - iHeight) / 2 - 16;
+    focus();
+    resizeTo (iWidth, iHeight);
+    moveTo ( iLeft, iTop );
+}
+
+<body onload="WindowOnLoad()">
+
+***************************************** vbs **************************************************
+' Координаты по горизонтали, по вертикали для vbs
+with window
+    .moveto screen.width / 2 - -321, screen.height / 2 - 383
+end With
+' Ширина, высота
+with window
+    .resizeto 368,733
+end With
+***************************************** vbs **************************************************
+visible
+    Отображается все содержание элемента, даже за пределами установленной высоты и ширины.
+hidden
+    Отображается только область внутри элемента, остальное будет скрыто.
+scroll
+    Всегда добавляются полосы прокрутки.
+auto
+    Полосы прокрутки добавляются только при необходимости.
+inherit
+    Наследует значение родителя.
+*******************************************************************************************
+
+Согласно одной из наиболее распространённых версий,
+город Львов был назван князем Данилой Галицким
+ в честь его сына Льва[10].
+На протяжении всей своей истории Львов никогда не переименовывался.
+На языках народов, оставивших заметный культурный след в городе,
+Львов звучит так: на украинском — Львів, на польском — Lwów (Львув),
+ на русском — Львов,
+немецком — Lemberg (Лемберг),
+на идише — לעמבערג (Лемберг),
+на армянском — Լվով (Львов),
+на крымскотатарском — İlbav (Ильбав).
+
+raum musik
+http://calendar.vpogiba.info/wg/wsh/hta.htm#id
+
+0V3z5h90
+
+window.resizeTo(370,190);
+
+******************************************************************************************************************************************************************
+<script language="JavaScript"><!--
+window.location.href = "http://www.dengi.far.ru/"
+// --> </script>
+******************************************************************************************************************************************************************
+<script language="JavaScript" type="text/javascript">
+<!--
+document.write("Вы используете: " + navigator.appName + " " + navigator.appVersion);
+// -->
+</script>
+******************************************************************************************************************************************************************
+
+none
+    No border; the computed border width is zero.
+hidden
+    Same as 'none', except in terms of border conflict resolution for table elements.
+dotted
+    The border is a series of dots.
+dashed
+    The border is a series of short line segments.
+solid
+    The border is a single line segment.
+double
+    The border is two solid lines. The sum of the two lines and the space between them equals the value of 'border-width'.
+groove
+    The border looks as though it were carved into the canvas.
+ridge
+    The opposite of 'groove': the border looks as though it were coming out of the canvas.
+inset
+    The border makes the box look as though it were embedded in the canvas.
+outset
+    The opposite of 'inset': the border makes the box look as though it were coming out of the canvas.
+
+************************************************* Исторические часы ***************************************************************************************
+
+
+<!-- Этот скрипт содержится в архиве JavaScript'ов - JavaScript Archive -->
+<!--                       http://jsarchive.al.ru                       -->
+
+************************************************* Исторические часы ***************************************************************************************
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible"  content=" IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
+<title></title>
+</head>
+<body onLoad="load()">
+<canvas width="1300px" height="600px" id='alarm'></canvas><!--koordinati centra hasov-->
+<script type="text/javascript">
+function load(){
+//Получаем DOM-объект нашего "холста"
+var canvas=document.getElementById("alarm");
+//Берём его контекст (с его помощью и будем рисовать)
+var ctx=canvas.getContext("2d");
+//Размеры "холста"
+var width=canvas.width,height=canvas.height;
+var position_s=0,position_m=0,position_h=0;
+//Получаем значения в радианах, соответствующие градусам,
+//на которые повернётся соответствующая стрелка часов за секунду
+var sec=6*Math.PI/180,
+min =1/ 10*Math.PI/180,
+hour=1/120*Math.PI/180;
+//И текущее положение стрелок на часах
+//С переводом из секунд в соответствующие единицы времени
+position_s=new Date().getSeconds()*sec;
+position_m=new Date().getMinutes()*60*min;
+position_h=new Date().getHours()*3600*hour+new Date().getMinutes()*60*hour;
+function alarm()//функция перерисовки Canvas'а вызывается каждую секунду
+{
+function line(pos,r,w){ //функция рисования линии
+ctx.lineWidth=w||1;//первый аргумент - градус поворота стрелки
+ctx.beginPath();
+ctx.moveTo(width/2,height/2);//center conusa
+ctx.lineTo(width/2+r*Math.cos(pos-Math.PI/2), //2 ploscost conusa,
+height/2+r*Math.sin(pos-Math.PI/2));//2 ploscost conusa,
+ctx.stroke();
+ctx.closePath();
+}
+position_s+=sec;
+position_m+=min;
+position_h+=hour;
+ctx.clearRect (0, 0, width, height);//Функция очистки Canvas
+ctx.beginPath();//Начало рисования
+ctx.arc(width/2,height/2,198,0,2*Math.PI);//Рисуется круг циферблата 100
+ctx.stroke();//Обводится по контуру
+ctx.beginPath();//Начало рисования
+ctx.arc(width/2,height/2,208,0,2*Math.PI);//Рисуется круг циферблата 150
+ctx.stroke();//Обводится по контуру
+ctx.beginPath();//Начало рисования
+ctx.arc(width/2,height/2,233,0,2*Math.PI);//Рисуется круг циферблата 1 polovina ocrujnosti,2 ocrujnost,180 radius ocrujnosti
+ctx.stroke();//Обводится по контуру
+ctx.closePath();//Т.к. fill() не было вызвано, то только обрисует по контуру
+//Рисует 12 кружков, соответствующих часам
+for(var i=0;i<=Math.PI*2;i+=Math.PI*2/12)//Math.PI*2 - полный круг часов,Math.PI*2/12 - это 1/12 полного круга часов
+{
+ctx.beginPath();
+ctx.arc(width/2+220*Math.cos(i),//2 center полного круга кружков,220 shirina полного круга кружков
+height/2+220*Math.sin(i),//2 center полного круга кружков,220  visota полного круга кружков
+13,0,2*Math.PI);//13 radius кружков,0 uglovoe sehenie кружков,2 vopros
+ctx.fill();
+ctx.closePath();
+}
+for(var i=0;i<=Math.PI*2;i+=Math.PI*2/60)//Math.PI*2 - полный круг часов,Math.PI*2/12 - это 1/12 полного круга часов
+{
+ctx.beginPath();
+ctx.arc(width/2+203*Math.cos(i),//2 center полного круга кружков,220 shirina полного круга кружков
+height/2+203*Math.sin(i),//2 center полного круга кружков,220  visota полного круга кружков
+5,0,2*Math.PI);//13 radius кружков,0 uglovoe sehenie кружков,2 vopros
+ctx.fill();
+ctx.closePath();
+}
+line(position_h,233,8);//Рисование стрелок часов
+line(position_m,208,3);//Рисование стрелок часов
+line(position_s,208,1);//Рисование стрелок часов
+}
+setInterval(alarm,1000);}//Создание таймера, вызывающего всю перерисовку
+</script>
+</body>
+</html>
+
+**************************************************************************************************************************
+
+browser_name = navigator.appName; 
+browser_version = parseFloat(navigator.appVersion); 
+if (browser_name == "Netscape" && browser_version >= 3.0) { roll = 'true'; } 
+else if (browser_name == "Microsoft Internet Explorer" && browser_version >= 3.0) { roll = 'true'; } 
+else { roll = 'false'; } 
+function over(img,ref) { if (roll == 'true') { document.images[img].src = ref; } } 
+function out(img,ref)  { if (roll == 'true') { document.images[img].src = ref; } }
+// Функция раскрывающегося списка 
+function tr(target)
+{
+var ol = target.parentNode.getElementsByTagName("ol").item(0);
+    ol.style.display = (ol.style.display == "block")? "none": "block";
+}
+function blo()
+{
+var change = document.getElementsByClassName("plus");
+var len = change.length;
+for(var i=0; i<len; i++){
+  change[i].onclick = function()
+  {this.classList.toggle("minus");}
+}
+}
+
+
